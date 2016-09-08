@@ -7,38 +7,41 @@ Manning, Christopher D., Mihai Surdeanu, John Bauer, Jenny Finkel, Steven J. Bet
 The java version of stanford sentiment analysis is downloaded from (http://stanfordnlp.github.io/CoreNLP/)
 
 
-# How to install this python library(Make sure you have git installed)
-open terminal with (Alt + Ctrl + t)
+# Install this python library (Ubuntu)
+
+Open terminal with (Alt + Ctrl + t)
+
+Make sure you have `git` and `unzip` installed by running `sudo apt-get install git unzip`
 
 ### Install and configure java first (provide password when needed)
-1. sudo add-apt-repository ppa:webupd8team/java
-2. sudo apt-get update
-3. sudo apt-get install oracle-java8-installer
-4. sudo apt-get install oracle-java8-set-default
+1. `sudo add-apt-repository ppa:webupd8team/java`
+2. `sudo apt-get update`
+3. `sudo apt-get install oracle-java8-installer`
+4. `sudo apt-get install oracle-java8-set-default`
 
-### Need to clone and install the python library (provide password when needed)
-1. git clone https://github.com/KnHuq/stanford_sentiment_analysis.git
-2. cd stanford_sentiment_analysis
-3. sudo chmod +x install.sh
-4. sudo ./install.sh 
+### Clone and install the python library (provide password when needed)
+1. `git clone https://github.com/KnHuq/stanford_sentiment_analysis.git`
+2. `cd stanford_sentiment_analysis`
+3. `sudo chmod +x install.sh`
+4. `sudo ./install.sh`
 
-Now its jone!
-#open python 
---->>> python
+Now its done!
 
---->>> from stanford_sentiment import get_sentiment
+# Usage
 
---->>> get_sentiment("It is good")
+Open python in interactive mode and run the following code:
 
->['It is good.', '  Positive']
+```python
+>>> from stanford_sentiment import get_sentiment
+>>> get_sentiment("It is good")
+['It is good.', '  Positive']
 
---->>> get_sentiment("It is not good")
+>>> get_sentiment("It is not good")
+['It is not good.', '  Negative']
 
->['It is not good.', '  Negative']
-
---->>> get_sentiment("It is not good. He is very bad boy")
-
->['It is not good.', '  Negative', 'He is very bad boy.', '  Negative']
+>>> get_sentiment("It is not good. He is very bad boy")
+['It is not good.', '  Negative', 'He is very bad boy.', '  Negative']
+```
 
 N.B: This library uses Stanford CoreNLP java api to extract the sentiment from the text. This library is created for the ease of the python developer.
 You are welcome to contribute in this repo. Thank you.
