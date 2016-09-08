@@ -39,7 +39,7 @@ def get_sentiment(sentence):
     home_path = os.path.expanduser('~')
 
     # Creating a temporary file to write the sentence
-    temp_file = home_path + "temp_sentiment.txt"
+    temp_file = home_path + "/temp_sentiment.txt"
 
     # Writting the file
     with open(temp_file, "w") as sentiment_file:
