@@ -25,13 +25,19 @@ open terminal with (Alt + Ctrl + t)
 Now its jone!
 #open python 
 --->>> python
+
 --->>> from stanford_sentiment import get_sentiment
+
 --->>> get_sentiment("It is good")
+
 >['It is good.', '  Positive']
 
 --->>> get_sentiment("It is not good")
+
 >['It is not good.', '  Negative']
+
 --->>> get_sentiment("It is not good. He is very bad boy")
+
 >['It is not good.', '  Negative', 'He is very bad boy.', '  Negative']
 
 N.B: This library uses Stanford CoreNLP java api to extract the sentiment from the text. This library is created for the ease of the python developer.
