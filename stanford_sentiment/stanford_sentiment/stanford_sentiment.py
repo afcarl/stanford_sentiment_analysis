@@ -56,7 +56,7 @@ def get_sentiment(sentence):
     sentiment, error = subprocess_command.communicate()
 
     # Removing the temporary file
-    # os.remove(temp_file)
+    os.remove(temp_file)
 
     sentiment = filter(None, sentiment.split("\n"))
 
